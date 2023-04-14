@@ -1,0 +1,6 @@
+import { KARTYAK } from "./adat";
+
+$(() =>
+{
+    
+});
