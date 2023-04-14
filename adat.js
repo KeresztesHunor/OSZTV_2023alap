@@ -1,7 +1,7 @@
-import { Amoba } from "./amoba";
-import { Labor } from "./labor"
-import { Mutacio } from "./mutacio";
-import { Racs } from "./racs";
+import { Amoba } from "./amoba.js";
+import { Labor } from "./labor.js";
+import { Mutacio } from "./mutacio.js";
+import { Racs } from "./racs.js";
 
 export const KARTYAK = [
     new Amoba("egySzemu", "kek", "csikos"),

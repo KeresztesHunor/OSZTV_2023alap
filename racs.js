@@ -1,4 +1,4 @@
-import { Kartya } from "./kartya";
+import { Kartya } from "./kartya.js";
 
 export class Racs extends Kartya
 {
