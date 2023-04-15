@@ -4,6 +4,6 @@ export class Racs extends Kartya
 {
     constructor()
     {
-        super("racs.jpg");
+        super("kepek/racs.jpg");
     }
 }

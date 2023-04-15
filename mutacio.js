@@ -10,7 +10,7 @@ export class Mutacio extends Kartya
 {
     constructor(mutacioTipus)
     {
-        super(`mutacio_${mutacioTipus}.jpg`);
-        this.mutacioTipus = mutacioTipus;
+        super(`kepek/mutacio_${mutacioTipus}.jpg`);
+        this.mutacioTipus = MUTACIO_TIPUSOK[mutacioTipus];
     }
 }

@@ -10,7 +10,7 @@ export class Labor extends Kartya
 {
     constructor(laborSzin)
     {
-        super(`labor_${laborSzin}.jpg`);
-        this.laborSzin = laborSzin;
+        super(`kepek/indulo_${laborSzin}.jpg`);
+        this.laborSzin = LABOR_SZINEK[laborSzin];
     }
 }

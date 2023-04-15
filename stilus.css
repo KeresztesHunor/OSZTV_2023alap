@@ -7,22 +7,39 @@ body {
 }
 
 #dobasInfo {
-  width: 16vw;
-  height: 16vw;
-  padding: 1vw;
+  width: calc(var(--kisebb-ertek) * 32);
+  height: calc(var(--kisebb-ertek) * 32);
+  padding: calc(var(--kisebb-ertek) * 2);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 5%);
-  box-shadow: 0 0 16px rgba(0, 0, 0, 50%) inset;
-  border-radius: 0.5vw;
+  box-shadow: 0 0 calc(var(--kisebb-ertek) * 2) rgba(0, 0, 0, 50%) inset;
+  border-radius: calc(var(--kisebb-ertek));
 }
 
 #dobasInfo > button {
-  font-size: 1vw;
-  padding: 0.25vw;
+  font-size: calc(var(--kisebb-ertek) * 2);
+  padding: calc(var(--kisebb-ertek) * 0.5);
   color: white;
   background-color: hsl(0, 0%, 25%);
-  border-radius: 0.25vw;
+  border-radius: calc(var(--kisebb-ertek) * 0.5);
+}
+
+#kartyak {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#kartyak > img {
+  position: absolute;
+  transform-origin: center center;
+  width: calc(var(--kisebb-ertek) * 8);
+  height: calc(var(--kisebb-ertek) * 8);
+  --szog: calc(360deg / var(--lapok-szama) * var(--index));
+  --szorzo: calc(var(--kisebb-ertek) * 40);
+  transform: translate(calc(sin(var(--szog)) * var(--szorzo)), calc(cos(var(--szog)) * -1 * var(--szorzo))) translate(-50%, -50%) rotate(var(--szog));
 }
