@@ -7,8 +7,9 @@ body {
 }
 
 #dobasInfo {
-  width: calc(var(--kisebb-ertek) * 32);
-  height: calc(var(--kisebb-ertek) * 32);
+  font-family: Arial, Helvetica, sans-serif;
+  width: calc(var(--kisebb-ertek) * 48);
+  height: calc(var(--kisebb-ertek) * 48);
   padding: calc(var(--kisebb-ertek) * 2);
   position: absolute;
   top: 50%;
@@ -17,14 +18,45 @@ body {
   background-color: rgba(0, 0, 0, 5%);
   box-shadow: 0 0 calc(var(--kisebb-ertek) * 2) rgba(0, 0, 0, 50%) inset;
   border-radius: calc(var(--kisebb-ertek));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-#dobasInfo > button {
+#dobasInfo > h1 {
+  margin: 0;
+  font-size: calc(var(--kisebb-ertek) * 4);
+}
+
+#dobasInfo > table {
+  width: 100%;
   font-size: calc(var(--kisebb-ertek) * 2);
-  padding: calc(var(--kisebb-ertek) * 0.5);
-  color: white;
-  background-color: hsl(0, 0%, 25%);
-  border-radius: calc(var(--kisebb-ertek) * 0.5);
+  border-spacing: 0;
+  border: 1px solid rgba(0, 0, 0, 50%);
+}
+
+#dobasInfo > table > colgroup > col {
+  width: 50%;
+}
+
+#dobasInfo > table > thead > tr > th,
+#dobasInfo > table > thead > tr > td,
+#dobasInfo > table > tbody > tr > td {
+  border: 1px solid rgba(0, 0, 0, 50%);
+}
+
+#dobasInfo > table > thead > tr > th {
+  background-color: rgba(0, 0, 0, 20%);
+}
+
+#dobasInfo > table > thead > tr > th[colspan="2"] {
+  background-color: rgba(0, 0, 0, 25%);
+}
+
+#dobasInfo > table > thead > tr > td,
+#dobasInfo > table > tbody > tr > td {
+  background-color: rgba(0, 0, 0, 15%);
 }
 
 #kartyak {
@@ -42,4 +74,8 @@ body {
   --szog: calc(360deg / var(--lapok-szama) * var(--index));
   --szorzo: calc(var(--kisebb-ertek) * 40);
   transform: translate(calc(sin(var(--szog)) * var(--szorzo)), calc(cos(var(--szog)) * -1 * var(--szorzo))) translate(-50%, -50%) rotate(var(--szog));
+}
+
+.amoba:hover {
+  border: calc(var(--kisebb-ertek) * 0.5) solid red;
 }

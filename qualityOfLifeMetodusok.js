@@ -12,3 +12,12 @@ export function ujParatlanTagetIr(tag, parameterek = null)
 {
     return `<${tag}${parameterek ? " " + parameterek : ""}>`;
 }
+
+export function listaKeveres(lista)
+{
+    for (let i = lista.length - 1; i > 0; i--)
+    {
+        const INDEX = Math.floor(Math.random() * (i + 1));
+        [lista[i], lista[INDEX]] = [lista[INDEX], lista[i]];
+    }
+}

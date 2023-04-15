@@ -1,7 +1,7 @@
 import { Kartya } from "./kartya.js";
 
 export const MUTACIO_TIPUSOK = {
-    amoba: "amoba",
+    amoba: "típus",
     szin: "szín",
     minta: "minta"
 };

@@ -19,9 +19,14 @@ export class Amoba extends Kartya
 {
     constructor(tipus, szin, minta)
     {
-        super(`kepek/amoba${TIPUSOK[tipus] === TIPUSOK.egySzemu ? 1 : 2}_${szin}_${minta}.jpg`);
+        super(`kepek/amoba${TIPUSOK[tipus] === TIPUSOK.egySzemu ? 2 : 1}_${szin}_${minta}.jpg`);
         this.tipus = TIPUSOK[tipus];
         this.szin = SZINEK[szin];
         this.minta = MINTAK[minta];
+    }
+
+    osszehasonlit(masikAmoba)
+    {
+        return this.tipus === masikAmoba.tipus && this.szin === masikAmoba.szin && this.minta === masikAmoba.minta;
     }
 }
