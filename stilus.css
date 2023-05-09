@@ -59,6 +59,29 @@ body {
   background-color: rgba(0, 0, 0, 15%);
 }
 
+#dobasInfo > a {
+  color: white;
+  text-decoration: none;
+  font-size: calc(var(--kisebb-ertek) * 2);
+  background-color: hsl(0, 0%, 20%);
+  margin-top: calc(var(--kisebb-ertek) * 0.5);
+  border: calc(var(--kisebb-ertek) * 0.5) hsl(0, 0%, 40%) outset;
+  border-radius: calc(var(--kisebb-ertek) * 0.5);
+  transition: 0.1s;
+}
+
+#dobasInfo > a:hover {
+  background-color: hsl(0, 0%, 25%);
+  border-color: hsl(0, 0%, 50%);
+  transition: 0.1s;
+}
+
+#dobasInfo > a:active {
+  background-color: hsl(0, 0%, 15%);
+  border-style: inset;
+  border-color: hsl(0, 0%, 30%);
+}
+
 #kartyak {
   position: absolute;
   top: 50%;
@@ -78,4 +101,5 @@ body {
 
 .amoba:hover {
   border: calc(var(--kisebb-ertek) * 0.5) solid red;
+  transition: 0.1s;
 }

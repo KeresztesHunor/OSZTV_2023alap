@@ -3,8 +3,7 @@ import { Labor, LABOR_SZINEK } from "./labor.js";
 import { Mutacio, MUTACIO_TIPUSOK } from "./mutacio.js";
 import { Racs } from "./racs.js";
 
-export const KARTYAK = (() =>
-{
+export const KARTYAK = (() => {
     const LISTA = [];
     for (const TIPUSOK_KULCS in TIPUSOK)
     {

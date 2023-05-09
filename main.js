@@ -16,8 +16,7 @@ let megtalalandoAmobaIndexe;
 
 let pontszam = 0;
 
-$(() =>
-{
+$(() => {
     rootStilus = $("head > style");
     alapCsstBeallit();
     $(window).resize(alapCsstBeallit);
@@ -25,14 +24,11 @@ $(() =>
     listaKeveres(KARTYAK);
 
     const KARTYAK_DIV = $("#kartyak");
-    $(KARTYAK_DIV).html(() =>
-    {
+    $(KARTYAK_DIV).html(() => {
         let i = 0;
         let txt = "";
-        KARTYAK.forEach((kartya, index) =>
-        {
-            txt += kepetIr(kartya.kep, (() =>
-            {
+        KARTYAK.forEach((kartya, index) => {
+            txt += kepetIr(kartya.kep, (() => {
                 switch (kartya.constructor)
                 {
                     case Amoba:
@@ -61,10 +57,8 @@ $(() =>
     infoMezok["pontok"] = $("#pontok");
 
     const AMOBA_KARTYAK = $(".amoba").toArray();
-    AMOBA_KARTYAK.forEach(amobaKartya =>
-    {
-        $(amobaKartya).on("click", () =>
-        {
+    AMOBA_KARTYAK.forEach(amobaKartya => {
+        $(amobaKartya).on("click", () => {
             const TALALAT = megtalalandoAmobaIndexe === parseInt(getComputedStyle(amobaKartya).getPropertyValue("--index"));
             $(infoMezok.pontok).html(TALALAT ? ++pontszam : --pontszam);
             if (TALALAT)
@@ -90,21 +84,20 @@ function dobokockaDobas()
 {
     const ORAMUTATO_IRANY = Math.random() < 0.5;
     $(infoMezok.irany).html(ORAMUTATO_IRANY ? "fehér" : "fekete");
-    const indexetInkremental = ORAMUTATO_IRANY ? () =>
-    {
+    const indexetInkremental = ORAMUTATO_IRANY
+    ? () => {
         if (++kartyaIndex > KARTYAK.length - 1)
         {
             kartyaIndex = 0;
         }
-    } : () =>
-    {
+    }
+    : () => {
         if (--kartyaIndex < 0)
         {
             kartyaIndex = KARTYAK.length - 1;
         }
     }
-    let kartyaIndex = (() =>
-    {
+    let kartyaIndex = (() => {
         const LABOR_SZIN = LABOR_SZINEK[randomKulcs(LABOR_SZINEK)];
         $(infoMezok.laborSzin).html(LABOR_SZIN);
         let i = 0;
